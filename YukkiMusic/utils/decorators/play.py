@@ -13,23 +13,17 @@ from config import PLAYLIST_IMG_URL, PRIVATE_BOT_MODE, adminlist
 from strings import get_string
 from YukkiMusic import YouTube, app
 from YukkiMusic.misc import SUDOERS
-from YukkiMusic.utils.database import (get_cmode, get_lang,
+from YukkiMusic.utils.database import (get_chatmode, get_cmode,
+                                       get_lang, get_loop,
                                        get_playmode, get_playtype,
-                                       is_active_chat,
                                        is_commanddelete_on,
                                        is_served_private_chat)
-from YukkiMusic.utils.database.memorydatabase import is_maintenance
 from YukkiMusic.utils.inline.playlist import botplaylist_markup
 
 
 def PlayWrapper(command):
     async def wrapper(client, message):
-        if await is_maintenance() is False:
-            if message.from_user.id not in SUDOERS:
-                return await message.reply_text(
-                    "Bot is under maintenance. Please wait for some time..."
-                )
-        if PRIVATE_BOT_MODE == str(True):
+        if PRIVATE_BOT_MODE:
             if not await is_served_private_chat(message.chat.id):
                 await message.reply_text(
                     "**Private Music Bot**\n\nOnly for authorized chats from the owner. Ask my owner to allow your chat first."
@@ -87,41 +81,49 @@ def PlayWrapper(command):
             return await message.reply_text(
                 _["general_4"], reply_markup=upl
             )
-        if message.command[0][0] == "c":
+        sms = _["play_1"]
+        chatmode = await get_chatmode(message.chat.id)
+        if chatmode == "Group":
+            sms += "\n\n**▶️ Play Mode:** Group"
+            chat_id = message.chat.id
+            channel = None
+        else:
             chat_id = await get_cmode(message.chat.id)
-            if chat_id is None:
-                return await message.reply_text(_["setting_12"])
             try:
                 chat = await app.get_chat(chat_id)
             except:
                 return await message.reply_text(_["cplay_4"])
             channel = chat.title
-        else:
-            chat_id = message.chat.id
-            channel = None
+            sms += f"\n\n**▶️ Play Mode:** Channel[{channel}]"
         playmode = await get_playmode(message.chat.id)
+        if str(playmode) == "Direct":
+            sms += "\n**🔎 Search Mode:** Direct"
+        else:
+            sms += "\n**🔎 Search Mode:** Inline"
         playty = await get_playtype(message.chat.id)
         if playty != "Everyone":
             if message.from_user.id not in SUDOERS:
+                sms += "\n**🧛 Play Type:** Admins Only"
                 admins = adminlist.get(message.chat.id)
                 if not admins:
                     return await message.reply_text(_["admin_18"])
                 else:
                     if message.from_user.id not in admins:
                         return await message.reply_text(_["play_4"])
-        if message.command[0][0] == "v":
+        if "vplay" in message.command:
             video = True
         else:
             if "-v" in message.text:
                 video = True
             else:
-                video = True if message.command[0][1] == "v" else None
-        if message.command[0][-1] == "e":
-            if not await is_active_chat(chat_id):
-                return await message.reply_text(_["play_18"])
-            fplay = True
+                video = None
+        loop = await get_loop(chat_id)
+        if loop != 0:
+            sms += f"\n**🔄 Loop Play:** Enabled for {loop} times"
         else:
-            fplay = None
+            sms += "\n**🔄 Loop Play:** Disabled"
+        sms += "\n\nChange modes via /playmode"
+        mystic = await message.reply_text(sms)
         return await command(
             client,
             message,
@@ -130,8 +132,8 @@ def PlayWrapper(command):
             video,
             channel,
             playmode,
+            mystic,
             url,
-            fplay,
         )
 
     return wrapper
