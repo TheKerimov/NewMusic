@@ -7,36 +7,17 @@
 #
 # All rights reserved.
 
-HELP_1 = """✅**<u>Admin Commands:</u>**
+HELP_1 = """⚡Hərkəs Üçün Əmr Menyusu
+🎵 /play - Səsli Söhbətdə Musiqi Dinlə
+🎥 /vplay - Səsli Söhbətdə Video İzlə
 
-**c** stands for channel play.
+⚠️Adminlər Üçün Əmr Menyusu
+⏸️ /pause - Musiqini Dayandırar
+▶️ /resume - Musiqini Dəvam Etdirər
+⏹ /end - Musiqini Sonlandırar
+⏩ /skip - Sıradakı Musiqini Oxuyar
 
-/pause or /cpause - Pause the playing music.
-/resume or /cresume- Resume the paused music.
-/mute or /cmute- Mute the playing music.
-/unmute or /cunmute- Unmute the muted music.
-/skip or /cskip- Skip the current playing music.
-/stop or /cstop- Stop the playing music.
-/shuffle or /cshuffle- Randomly shuffles the queued playlist.
-/seek or /cseek - Forward Seek the music to your duration
-/seekback or /cseekback - Backward Seek the music to your duration
-/restart - Restart bot for your chat .
-
-
-✅<u>**Specific Skip:**</u>
-/skip or /cskip [Number(example: 3)] 
-    - Skips music to a the specified queued number. Example: /skip 3 will skip music to third queued music and will ignore 1 and 2 music in queue.
-
-✅<u>**Loop Play:**</u>
-/loop or /cloop [enable/disable] or [Numbers between 1-10] 
-    - When activated, bot loops the current playing music to 1-10 times on voice chat. Default to 10 times.
-
-✅<u>**Auth Users:**</u>
-Auth Users can use admin commands without admin rights in your chat.
-
-/auth [Username] - Add a user to AUTH LIST of the group.
-/unauth [Username] - Remove a user from AUTH LIST of the group.
-/authusers - Check AUTH LIST of the group."""
+🆘Botun Qruplarda İşləyə Bilməsi Üçün Admin Olmalıdır!"""
 
 
 HELP_2 = """✅<u>**Play Commands:**</u>
