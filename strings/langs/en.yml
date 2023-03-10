@@ -76,7 +76,7 @@ start_6 : "❗️ **Superqrup lazımdır** ❗️\n\nLütfən, **qrupunuzu** **s
 start_7 : "**Blacklisted Chat**\n\nYou're chat has been blacklisted by the Bot. Please ask any SudoUser to whitelist chat first. Check [Sudolist from here]({0})"
 
 # Help
-help_1 : "Ətraflı məlumat üçün aşağıdakı düymələrə klikləyin. Əgər komandada hər hansı problemlə üzləşsəniz, bot sahibimlə əlaqə saxlaya və ya dəstək çatında soruşa bilərsiniz.\n\nBütün əmrlər aşağıdakılarla istifadə edilə bilər: /"
+help_1 : "⚡Ətraflı Məlumat Üçün Aşağıdakı Buttonlara Klikləyin."
 help_2 : "Kömək üçün PM-də mənimlə əlaqə saxlayın."
 
 # Settings
