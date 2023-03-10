@@ -90,23 +90,6 @@ def private_panel(_, BOT_USERNAME, OWNER: Union[bool, int] = None):
                 ),
             ]
         )
-    else:
-        if SUPPORT_CHANNEL:
-            buttons.append(
-                [
-                    InlineKeyboardButton(
-                        text=_["S_B_4"], url=f"{SUPPORT_CHANNEL}"
-                    )
-                ]
-            )
-        if SUPPORT_GROUP:
-            buttons.append(
-                [
-                    InlineKeyboardButton(
-                        text=_["S_B_3"], url=f"{SUPPORT_GROUP}"
-                    )
-                ]
-            )
         if OWNER:
             buttons.append(
                 [
