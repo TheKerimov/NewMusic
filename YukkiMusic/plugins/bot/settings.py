@@ -71,7 +71,7 @@ async def settings_cb(client, CallbackQuery, _):
         pass
     buttons = setting_markup(_)
     return await CallbackQuery.edit_message_text(
-        _["setting_1"].format(
+        _["settings_1"].format(
             CallbackQuery.message.chat.title,
             CallbackQuery.message.chat.id,
         ),
