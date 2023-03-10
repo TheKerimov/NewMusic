@@ -68,7 +68,7 @@ admin_27 : "Loop Play qeyri-aktiv edilib"
 
 # Start
 start_1 : "Məni {0}-da olduğunuz üçün təşəkkür edirəm.\n{1} sağdır.\n\nHər hansı yardım və ya yardım üçün dəstək qrupumuzu və kanalımızı yoxlayın."
-start_2 : "Salam, mənim adım {0}.\n\nMənim bəzi faydalı xüsusiyyətləri olan teleqram yayım botuyam. Youtube, Spotify, Resso, AppleMusic, Soundcloud və s. kimi platformaları istifadə edirəm.\n\nMəni qruplarınıza əlavə etməkdən çəkinməyin."
+start_2 : "👋🏻Salam Mən Səsli Söhbətlərdə Musiqi Oxuya Bilən Bir Botam\n\n✅Botun İstifadə Qaydasını Öyrənmək Üçün /help Əmrindən İstifadə Edin"
 start_3 : "Xoş gəlmisiniz {0}\n\nİşləmək üçün **admin icazəsinə** ehtiyacım yoxdur ( tələb olunana qədər).\n\nAssistent İstifadəçi Adı:- @{1}\nAssistent ID-si:- {2} "
 start_4 : "{0} Sahibi[{1}] indicə söhbətinizə qoşulub."
 start_5 : "{0} adlı istifadəçinin Sudo İstifadəçisinin[{1}] üzvü indicə söhbətinizə qoşulub."
