@@ -131,7 +131,7 @@ async def start_comm(client, message: Message, _):
         if name[0:3] == "del":
             await del_plist_msg(client=client, message=message, _=_)
         if name[0:3] == "inf":
-            m = await message.reply_text("🔎 Fetching Info!")
+            m = await message.reply_text("🔎Video Məlumatları Əldə Edilir...")
             query = (str(name)).replace("info_", "", 1)
             query = f"https://www.youtube.com/watch?v={query}"
             results = VideosSearch(query, limit=1)
@@ -147,16 +147,14 @@ async def start_comm(client, message: Message, _):
                 link = result["link"]
                 published = result["publishedTime"]
             searched_text = f"""
-🔍__**Video Track Information**__
+🔍__**Video Məlumatları**__
 
-❇️**Title:** {title}
-
-⏳**Duration:** {duration} Mins
-👀**Views:** `{views}`
-⏰**Published Time:** {published}
-🎥**Channel Name:** {channel}
-📎**Channel Link:** [Visit From Here]({channellink})
-🔗**Video Link:** [Link]({link})
+🔗**Adı:** {title}
+⏳**Müddəti:** {duration} Mins
+👀**Baxış Sayı:** `{views}`
+🎥**Kanal Adı:** {channel}
+📎**Kanal Linki:** [Visit From Here]({channellink})
+🔗**Video Linki:** [Link]({link})
 
 ⚡️ __Searched Powered By {config.MUSIC_BOT_NAME}__"""
             key = InlineKeyboardMarkup(
