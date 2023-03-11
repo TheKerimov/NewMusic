@@ -35,7 +35,6 @@ async def stream(
     mystic,
     user_id,
     result,
-    title,
     chat_id,
     user_name,
     original_chat_id,
