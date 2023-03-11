@@ -92,14 +92,6 @@ async def gen_thumb(videoid):
         draw.text(
             (5, 5), f"{MUSIC_BOT_NAME}", fill="white", font=name_font
         )
-        draw.text(
-            (600, 150),
-            "NOW PLAYING",
-            fill="white",
-            stroke_width=2,
-            stroke_fill="white",
-            font=font2,
-        )
         for line in para:
             if j == 1:
                 j += 1
@@ -124,19 +116,13 @@ async def gen_thumb(videoid):
 
         draw.text(
             (600, 450),
-            f"Views : {views[:23]}",
+            f"Baxış Sayı: {views}",
             (255, 255, 255),
             font=arial,
         )
         draw.text(
             (600, 500),
-            f"Duration : {duration[:23]} Mins",
-            (255, 255, 255),
-            font=arial,
-        )
-        draw.text(
-            (600, 550),
-            f"Channel : {channel}",
+            f"Müddəti : {duration}",
             (255, 255, 255),
             font=arial,
         )
