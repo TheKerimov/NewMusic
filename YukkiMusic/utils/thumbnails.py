@@ -92,6 +92,14 @@ async def gen_thumb(videoid):
         draw.text(
             (5, 5), f"{MUSIC_BOT_NAME}", fill="white", font=name_font
         )
+        draw.text(
+            (600, 150),
+            "Oxununur",
+            fill="white",
+            stroke_width=2,
+            stroke_fill="white",
+            font=font2,
+        )
         for line in para:
             if j == 1:
                 j += 1
