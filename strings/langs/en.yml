@@ -1,35 +1,35 @@
 name : 🇦🇿
 
 # General Strings
-general_1 : "İstifadəçinin mesajına cavab verin və ya istifadəçi adı/user_id-ni verin."
-general_2 : "Xəta! Komandanın Yanlış İstifadəsi."
-general_3 : "Sorğunuzu emal edərkən bəzi **istisna baş verdi**.\n\nİstisna növü:- {0}"
-general_4 : "Siz bu söhbət qrupunda anonim adminsiniz!\nAdmin Hüquqlarından İstifadəçi Hesabına qayıdın."
+general_1 : "💡İstifadəçinin Meşajına Cavab Verin Və Ya İstifadəçi Adı/User-İd Verin."
+general_2 : "❌Xəta! Komandanın Yanlış İstifadəsi."
+general_3 : "❌Sorğunuzu Emal Edərkən **Xəta Baş Verdi**\n⚙️Xəta Növü:- {0}"
+general_4 : "💡Siz Qrupda Anonim Adminsiniz!\n⚙️Admin Hüquqlarından İstifadəçi Hesabına Qayıdın."
 general_5 : "❌Bu Əmməliyyatı yerinə yetirmək üçün səsli söhbət hüquqlarını idarə edən admin olmalısınız."
 general_6 : "🆘Səsli Söhbətdə Musiqi Oxunmur"
 
 # Classes - Telegram.py
-tg_1 : "Bot hazırda endirmələrlə **həddən artıq yüklənib**.\n\n**Sonra cəhd edin:** {0} (__gözlənilən vaxt__)"
-tg_2 : "Telegramdan media yükləmək alınmadı."
+tg_1 : "🆘Bot Hazırda Endirmələrlə **Həddən Artıq Yüklənib**.\n\n**Daha Sonra Yenidən Cəhd Edin:** (__Gözlənilən Vaxt__) {0}"
+tg_2 : "❌Telegramdan Media Yükləmək Alınmadı."
 
 # Core - Call.py
-call_1 : "Bot köməkçi hesabını kanalınıza dəvət etmək üçün **Admin** İcazəsi tələb edir.\n\nKanal oynatma rejimini : /playmode vasitəsilə deaktiv edin"
-call_2 : "Qrupunuzda və ya kanalınızda Assistent qadağan edilib, lütfən, qadağanı ləğv edin.\n\n**Assistent İstifadəçi Adı:** @{0}\n**Assistent ID:** {1}"
-call_3 : "Assistent Hesabını söhbətinizə dəvət edərkən İstisna baş verdi.\n\n**Səbəb**: {0}"
-call_4 : "Bot **Link vasitəsilə İstifadəçiləri Dəvət Et** Köməkçi hesabını söhbət qrupunuza dəvət etmək üçün icazə tələb edir."
-call_5 : "Asistan Hesabı 5 Saniyəyə Qoşulacaq. Zəhmət Olmasa Gözləyin!"
+call_1 : "💡Bot Köməkçi Hesabını Kanalınıza Dəvət Etmək Üçün **Admin** İcazələri Tələb Edir.\n\n⚙️Kanal Oynatma Rejimini : /playmode Vasitəsilə Deaktiv Edə Bilərsiz"
+call_2 : "🆘Qrupunuzda Və Ya Kanalınızda Asistan Qadağan Edilib, Zəhmət Olmasa, Qadağanı Ləğv Edin.\n\n**Asistan İstifadəçi Adı:** @{0}\n**Asistan ID:** {1}"
+call_3 : "❌Asistan Hesabını Qrupa Dəvət Edərkən Xəta Baş Verdi.\n\n**ℹ️Səbəb**: {0}"
+call_4 : "💡Zəhmət Olmasa Bota Link İlə Dəvət Yetkisini Verin"
+call_5 : "⚡Asistan Hesabı 5 Saniyəyə Qoşulacaq. Zəhmət Olmasa Gözləyin!"
 call_6 : "{0} Qrupa Qoşuldu"
 call_7 : "**Zərərli Admin hüququ verilir **\n\nLütfən, botdan **İSTİFADƏÇİLƏRİ QADANAN** hüquqlarını silin."
 call_8 : "**Zərərli Admin hüququ verilir **\n\nLütfən, botdan **YENİ ADMINSƏLƏMƏ** hüquqlarını silin."
 call_9 : "**Yayımı dəyişmək alınmadı**\nTresi yenidən dəyişmək üçün /skip istifadə edin."
-call_10 : "Pleylistdən növbəti trek endirilir"
-call_11 : "Lütfən, kanalınıza @{0} əlavə edin[ ID: {1}].\n\nBot kanal təfərrüatlarını əldə edə bilmir."
+call_10 : "⚡Playlistdən Növbəti Musiqi Endirilir"
+call_11 : "💡Zəhmət Olmasa, Kanalınıza Asistanı Əlavə Edin\nAsistan İstifadəçi Adı:** @{0}\n**Asistan ID:** {1}\n🆘Bot Kanal Məlumatlarını Əldə Edə Bilmir"
 
 # PLUGINS - Auth.py
-auth_1 : "Qrupunuzun Səlahiyyətli İstifadəçilər Siyahısında (AUL) yalnız 20 İstifadəçi ola bilər"
-auth_2 : "Qrupunuzun Səlahiyyətli İstifadəçilər Siyahısına əlavə edildi."
-auth_3 : "Artıq Səlahiyyətli İstifadəçilər Siyahısındadır."
-auth_4 : "Bu Qrupun Səlahiyyətli İstifadəçiləri Siyahısından Silindi."
+auth_1 : "❌Qrupun İcazəli İstifadəçi Siyahısında (AUL) Yalnız 20 İstifadəçi Ola Bilər"
+auth_2 : "⚡Qrupun İcazəli İstifadəçi Siyahısına Əlavə Edildi"
+auth_3 : "💡Artıq İcazəli İstifadəçi Siyahısında Var"
+auth_4 : "💡Bu Qrupun Səlahiyyətli İstifadəçiləri Siyahısından Silindi."
 auth_5 : "Hədəf edilmiş istifadəçi Səlahiyyətli İstifadəçi deyil."
 auth_6 : "İcazəli İstifadəçilər götürülür... Lütfən gözləyin"
 auth_7 : "**Səlahiyyətli İstifadəçilər Siyahısı[AUL]:**\n\n"
