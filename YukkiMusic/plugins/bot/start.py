@@ -150,21 +150,21 @@ async def start_comm(client, message: Message, _):
 🔍__**Video Məlumatları**__
 
 🔗**Adı:** {title}
-⏳**Müddəti:** {duration} Mins
+⏳**Müddəti:** `{duration}`
 👀**Baxış Sayı:** `{views}`
 🎥**Kanal Adı:** {channel}
-📎**Kanal Linki:** [Visit From Here]({channellink})
-🔗**Video Linki:** [Link]({link})
+📎**Kanal Linki:** [Toxun]({channellink})
+🔗**Video Linki:** [Toxun]({link})
 
-⚡️ __Searched Powered By {config.MUSIC_BOT_NAME}__"""
+⚡️ __Axtardı {config.MUSIC_BOT_NAME}__"""
             key = InlineKeyboardMarkup(
                 [
                     [
                         InlineKeyboardButton(
-                            text="🎥 Watch ", url=f"{link}"
+                            text="🎥İzlə", url=f"{link}"
                         ),
                         InlineKeyboardButton(
-                            text="🔄 Close", callback_data="close"
+                            text="🗑️Bağla", callback_data="close"
                         ),
                     ],
                 ]
