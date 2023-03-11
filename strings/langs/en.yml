@@ -5,8 +5,8 @@ general_1 : "İstifadəçinin mesajına cavab verin və ya istifadəçi adı/use
 general_2 : "Xəta! Komandanın Yanlış İstifadəsi."
 general_3 : "Sorğunuzu emal edərkən bəzi **istisna baş verdi**.\n\nİstisna növü:- {0}"
 general_4 : "Siz bu söhbət qrupunda anonim adminsiniz!\nAdmin Hüquqlarından İstifadəçi Hesabına qayıdın."
-general_5 : "Bu əməliyyatı yerinə yetirmək üçün səsli söhbət hüquqlarını idarə edən admin olmalısınız."
-general_6 : "Bot səsli söhbətdə yayımlanmır."
+general_5 : "❌Bu Əmməliyyatı yerinə yetirmək üçün səsli söhbət hüquqlarını idarə edən admin olmalısınız."
+general_6 : "🆘Səsli Söhbətdə Musiqi Oxunmur"
 
 # Classes - Telegram.py
 tg_1 : "Bot hazırda endirmələrlə **həddən artıq yüklənib**.\n\n**Sonra cəhd edin:** {0} (__gözlənilən vaxt__)"
