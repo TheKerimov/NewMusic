@@ -122,6 +122,7 @@ async def stream(
                     photo=img,
                     caption=_["stream_1"].format(
                         user_name,
+                        title,
                         f"https://t.me/{app.username}?start=info_{vidid}",
                     ),
                     reply_markup=InlineKeyboardMarkup(button),
