@@ -45,12 +45,7 @@ GSTATS_COMMAND = get_command("GSTATS_COMMAND")
 STATS_COMMAND = get_command("STATS_COMMAND")
 
 
-@app.on_message(
-    filters.command(STATS_COMMAND)
-    & filters.group
-    & ~filters.edited
-    & ~BANNED_USERS
-)
+@app.on_message(filters.command(STATS_COMMAND) & SUDOERS)
 @language
 async def stats_global(client, message: Message, _):
     upl = stats_buttons(
@@ -63,12 +58,7 @@ async def stats_global(client, message: Message, _):
     )
 
 
-@app.on_message(
-    filters.command(GSTATS_COMMAND)
-    & filters.group
-    & ~filters.edited
-    & ~BANNED_USERS
-)
+@app.on_message(filters.command(GSTATS_COMMAND) & SUDOERS)
 @language
 async def gstats_global(client, message: Message, _):
     mystic = await message.reply_text(_["gstats_1"])
