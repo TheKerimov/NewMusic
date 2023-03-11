@@ -35,6 +35,7 @@ async def stream(
     mystic,
     user_id,
     result,
+    title,
     chat_id,
     user_name,
     original_chat_id,
@@ -118,10 +119,7 @@ async def stream(
                 run = await app.send_photo(
                     original_chat_id,
                     photo=img,
-                    caption=_["stream_1"].format(
-                        user_name,
-                        f"https://t.me/{app.username}?start=info_{vidid}",
-                    ),
+                    caption=_["stream_1"].format(title, user_name, f"https://t.me/{app.username}?start=info_{vidid}",),
                     reply_markup=InlineKeyboardMarkup(button),
                 )
                 db[chat_id][0]["mystic"] = run
