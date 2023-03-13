@@ -171,15 +171,13 @@ async def stream(
                 user_id,
                 "video" if video else "audio",
             )
-            Position = len(db.get(chat_id)) - 1
+            position = len(db.get(chat_id)) - 1
             qimg = await gen_qthumb(vidid, user_id)
             button = queue_markup(_, vidid, chat_id)
             run = await app.send_photo(
                 original_chat_id,
                 photo=qimg,
-                caption=_["queue_4"].format(
-                    Position, title, duration_min, user_name
-                ),
+                caption=_["queue_4"].format(position, title, duration_min, user_name),
                 reply_markup=InlineKeyboardMarkup(button),
             )
         else:
