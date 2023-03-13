@@ -178,7 +178,9 @@ async def stream(
             run = await app.send_photo(
                 original_chat_id,
                 photo=qimg,
-                caption=_["queue_4"].format(position, title, duration_min, user_name),
+                caption=_["queue_4"].format(
+                    position, title[:27], duration_min, user_name
+                ),
                 reply_markup=InlineKeyboardMarkup(button),
             )
         else:
