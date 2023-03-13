@@ -117,6 +117,33 @@ def stream_markup(_, videoid, chat_id):
     return buttons
 
 
+def queue_markup(_, videoid, chat_id):
+    buttons = [
+        [
+            InlineKeyboardButton(text="▶️", callback_data=f"ADMIN Resume|{chat_id}"),
+            InlineKeyboardButton(text="⏸️", callback_data=f"ADMIN Pause|{chat_id}"),
+            InlineKeyboardButton(text="⏭️", callback_data=f"ADMIN Skip|{chat_id}"),
+            InlineKeyboardButton(text="⏹️", callback_data=f"ADMIN Stop|{chat_id}"),
+        ],
+        [
+            InlineKeyboardButton(
+                text=_["PL_B_2"],
+                callback_data=f"add_playlist {videoid}",
+            ),
+            InlineKeyboardButton(
+                text=_["PL_B_3"],
+                callback_data=f"PanelMarkup {videoid}|{chat_id}",
+            ),
+        ],
+        [
+            InlineKeyboardButton(
+                text=_["CLOSEMENU_BUTTON"], callback_data="close"
+            )
+        ],
+    ]
+    return buttons
+
+
 def telegram_markup(_, chat_id):
     buttons = [
         [
