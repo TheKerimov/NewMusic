@@ -118,21 +118,60 @@ def telegram_markup_timer(_, chat_id, played, dur):
 ## Inline without Timer Bar
 
 
-def stream_markup(_, videoid, chat_id):
+def stream_markup(_, videoid, chat_id, played, dur):
+    played_sec = time_to_seconds(played)
+    duration_sec = time_to_seconds(dur)
+    percentage = (played_sec / duration_sec) * 100
+    anon = math.floor(percentage)
+    if 0 < anon <= 10:
+        bar = "◉—————————"
+    elif 10 < anon < 20:
+        bar = "—◉————————"
+    elif 20 <= anon < 30:
+        bar = "——◉———————"
+    elif 30 <= anon < 40:
+        bar = "———◉——————"
+    elif 40 <= anon < 50:
+        bar = "————◉—————"
+    elif 50 <= anon < 60:
+        bar = "—————◉————"
+    elif 60 <= anon < 70:
+        bar = "——————◉———"
+    elif 70 <= anon < 80:
+        bar = "———————◉——"
+    elif 80 <= anon < 95:
+        bar = "————————◉—"
+    else:
+        bar = "—————————◉"
+
     buttons = [
         [
             InlineKeyboardButton(
-                text=_["PL_B_2"],
-                callback_data=f"add_playlist {videoid}",
+                text=f"{played} {bar} {dur}",
+                callback_data="GetTimer",
+            )
+        ],
+        [
+            InlineKeyboardButton(
+                text="▷",
+                callback_data=f"ADMIN Resume|{chat_id}",
             ),
             InlineKeyboardButton(
-                text=_["PL_B_3"],
-                callback_data=f"PanelMarkup None|{chat_id}",
+                text="II", callback_data=f"ADMIN Pause|{chat_id}"
+            ),
+            InlineKeyboardButton(
+                text="☆", callback_data=f"add_playlist {videoid}"
+            ),
+            InlineKeyboardButton(
+                text="‣‣I", callback_data=f"ADMIN Skip|{chat_id}"
+            ),
+            InlineKeyboardButton(
+                text="▢", callback_data=f"ADMIN Stop|{chat_id}"
             ),
         ],
         [
             InlineKeyboardButton(
-                text=_["CLOSEMENU_BUTTON"], callback_data="close"
+                text="✯ ᴄʟᴏsᴇ ✯", callback_data=f"close"
             )
         ],
     ]
